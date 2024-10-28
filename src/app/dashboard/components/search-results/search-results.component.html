@@ -1,0 +1,24 @@
+<app-loading *ngIf="isLoadingLocation" />
+
+<div class="text-center mt-2">
+  <ul>
+    <li *ngIf="weatherData">
+      <h1 class="text-2xl font-serif">{{weatherData.location.name }}</h1>
+      <p>{{weatherData.location.country}}</p>
+      <button (click)="toggleWeatherInfo()"
+        class="mt-2 mb-2 px-4 py-2 bg-blue-300 text-black font-semibold rounded hover:bg-blue-500">
+        Check weather
+      </button>
+    </li>
+  </ul>
+</div>
+
+
+<div class="bg-blue-50 p-4 border border-blue-200 rounded mt-4">
+  <ul *ngIf="weatherData && showWeatherInfo">
+    <li>
+      <p>Temperature: {{ weatherData.current.temp_c }}</p>
+      <p>Wind Speed: {{ weatherData.current.wind_kph }}</p>
+    </li>
+  </ul>
+</div>

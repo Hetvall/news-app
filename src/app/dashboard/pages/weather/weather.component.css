@@ -1,0 +1,8 @@
+.background-image {
+  background-image: url('../../../../assets/fluffy-clouds-windy-sky-with-sun.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}

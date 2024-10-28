@@ -1,0 +1,13 @@
+<hr class="m-5">
+<ul class="flex flex-row gap-6 p-10">
+  @for (author of authorsService.authors(); track author) {
+  <li>
+    <img [srcset]="author.avatar" [alt]="author.first_name" class="rounded-2xl w-3/4">
+    <h1 class="text-2xl text-blue-400">{{ author.first_name }} {{ author.last_name | uppercase }} </h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque aspernatur iure, nobis tempora dolor rem, soluta
+      ducimus quia dignissimos optio odit? Dolorem corporis quod doloremque temporibus reprehenderit.
+    </p>
+  </li>
+  }
+</ul>

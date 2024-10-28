@@ -1,0 +1,20 @@
+<hr class="m-3">
+
+<ul class="flex flex-col gap-6 pt-5">
+  @for (article of articles; track articles) {
+  <li>
+    <a [href]="article.url" target="_blank">
+      <h1 class="font-bold text-4xl mb-4 hover:text-blue-300">{{ article.title }}</h1>
+    </a>
+    <p class="text-2xl mb-3">{{ article.description }}</p>
+    <h2 class="mb-6">{{ article.content }}</h2>
+    <img [srcset]="article.image" alt="news image" class="rounded-2xl w-3/6 mb-4">
+    <a [href]="article.url" target="_blank" class="mb-4">
+      Check more: <span class="font-semibold mb-4">{{ article.url }}</span>
+    </a>
+    <h3 class="mb-4">Published: <span class="font-semibold">{{ article.publishedAt }}</span></h3>
+    <h4 class="mb-4">Source: <span class="font-semibold cursor-pointer">{{ article.source.name }}</span></h4>
+    <hr class="my-8 border-t-2 border-gray-300">
+  </li>
+  }
+</ul>

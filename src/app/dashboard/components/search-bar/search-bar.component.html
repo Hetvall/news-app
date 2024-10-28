@@ -1,0 +1,7 @@
+<div class="search-container">
+  <span class="flex flex-row align-middle text-center">Search any city to check the current weather!</span>
+
+  <input type="text" class="border border-gray-400 rounded-lg p-1 mt-3 shadow-md" placeholder="Search city..." #txtQuery
+    (keyup)="onQueryChanged(txtQuery.value)">
+  <app-search-results />
+</div>
